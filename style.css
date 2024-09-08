@@ -1,0 +1,138 @@
+.background {
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+
+.card1 {
+    width: 1450px;
+    /* height: 550px; */
+    background: rgba(0, 0, 0, 0.05); /* More transparent */
+    backdrop-filter: blur(18px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* position: relative;  */
+    margin-top: 80px;
+    /* just demo */
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 80vh; /* You can adjust the height based on your needs */
+  overflow-y: auto; /* Enables scrolling when content exceeds the height */
+  box-sizing: border-box;
+  border-radius: 10px;
+    
+}
+  /* Keep the hover effects as they are */
+.card1:hover ~ .circle1 {
+    transform: translate(200px, 0px);
+}
+
+.card1:hover ~ .circle2 {
+    transform: translate(-60px, 0px);
+}
+  
+  .card1:hover ~ .circle3 {
+    transform: translate(30px, 20px);
+  }
+  
+  .card1:hover ~ .circle4 {
+    transform: translate(-10px, 10px);
+  }
+  
+  .card1:hover ~ .circle5 {
+    transform: translate(20px, -20px);
+  }
+  
+
+.circle1, .circle2, .circle3, .circle4, .circle5 {
+    position: absolute;
+    transition: transform 0.5s ease; /* Smooth transition for the translation */
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(45deg,#00f,rgb(32, 196, 171) );
+    /* box-shadow: 
+        0 0 5px black, 
+       
+        0 0 20px black, 
+        
+        0 0 80px black,  
+        0 0 100px black;  */
+    border-radius: 0% 0% 100% 0%;
+    top: 0%;
+    left: 0%;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(45deg,#00f,rgb(32, 196, 171) );
+    /* box-shadow: 
+        0 0 5px rgb(255, 94, 0),  
+        0 0 10px rgb(255, 94, 0), 
+        0 0 20px rgb(255, 94, 0), 
+        0 0 40px rgb(255, 94, 0), 
+        0 0 80px rgb(255, 94, 0), 
+        0 0 90px rgb(255, 94, 0), 
+        0 0 100px rgb(255, 94, 0); */
+    rotate: 45deg;
+    border-radius: 20%;
+    top: 10%;
+    right: 25%;
+    
+}
+
+.circle3 {
+    width: 260px;
+    height: 260px;
+    background:linear-gradient(100deg ,rgb(255, 29, 29),rgb(0, 0, 0)) ; /* This can be changed to any color you prefer for the background */
+    /* box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),  
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(255, 255, 255, 0.8), 
+        0 0 40px rgba(255, 255, 255, 0.8), 
+        0 0 80px rgba(255, 255, 255, 0.8), 
+        0 0 90px rgba(255, 255, 255, 0.8), 
+        0 0 100px rgba(255, 255, 255, 0.8); */
+    border-radius: 20%;
+    rotate: 45deg;
+    top: 50%;
+    left: 7%;
+}
+
+.circle4 {
+    width: 300px;
+    height: 300px;
+    background:linear-gradient(125deg ,rgb(255, 29, 29),rgb(0, 0, 0)) ;
+    /* box-shadow: 
+        0 0 5px #0f0, 
+        0 0 10px #0f0, 
+        0 0 20px #0f0, 
+        0 0 40px #0f0, 
+        0 0 80px #0f0, 
+        0 0 90px #0f0, 
+        0 0 100px #0f0; */
+        border-radius: 0% 0% 0% 100%;
+    top: 0%;
+    right: 0%;
+}
+html{
+    scroll-behavior: smooth;
+}

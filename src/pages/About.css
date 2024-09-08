@@ -1,0 +1,115 @@
+:root {
+  --rosebud: #FFADAD;
+  --marzipan: #FFD6A5;
+  --chiffon: #FDFFB6;
+  --mist: #D9EDF8;
+  --harp: #E4F1EE;
+  --geyser: #DEDAF4;
+  --gray:#686D76;
+  --white: #FFFFFF;
+  --dark: #000000;
+}
+
+#hero-text {
+  max-width:1000px;
+  font-family: 'Inter', Arial;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: var(--gray);
+  text-align: justify;
+}
+
+.highlight {
+  color: var(--white);
+  text-shadow: 
+2px 2px 1px var(--dark), 
+2px -1px 1px var(--dark), 
+-1px 1px 1px var(--dark), 
+-1px -1px 1px var(--dark);
+  font-size: 1.15em;
+}
+
+.highlight:hover {
+  color: var(--dark);
+  text-shadow:none;
+}
+
+.highlight.c1:hover {
+  background-color: var(--mist);
+}
+.highlight.c2:hover {
+  background-color: var(--rosebud);
+}
+.highlight.c3:hover {
+  background-color: var(--marzipan);
+}
+.pagesAline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin: 110px;
+}
+
+.Heading {
+  background-image: linear-gradient(43deg, white, #00f);
+  background-clip: text;
+  color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 50px;
+}
+/* Add your keyframe animation */
+/* @keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+/* Initial state before the animation starts */
+/* .animateAbout {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Apply this class to animate during scroll */
+.animateAbout.scroll {
+  opacity: 1;
+  transform: translateX(0px);
+} */
+
+
+
+
+
+.slider {
+  position: relative;
+  border:2px solid white;
+  width: 500px;
+  height: 250px;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.slides {
+  position: relative;
+}
+
+.slide {
+  display: none; /* Hide all slides by default */
+}
+
+.slide.active {
+  display: block; /* Show only the active slide */
+}
