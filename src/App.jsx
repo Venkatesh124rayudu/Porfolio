@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,34 +14,31 @@ const {
   profession,
   image,
   discription,
-  contactDetails: { email, LinkedIn,gitHub },
+  contactDetails: { email, LinkedIn, gitHub },
 } = profile;
 
 const App = () => {
   return (
-    <Router>
-
+    <Router basename="/Porfolio"> {/* This ensures correct routing for GitHub Pages */}
       <Nav />
       <div className="card1">
         <Routes>
           <Route
             path="/"
             element={
-              <>
-                <Home
-                  name={name}
-                  profession={profession}
-                  image={image}
-                  discription={discription}
-                  gitHub={gitHub}
-                  LinkedIn={LinkedIn}
-                />
-                <About />
-                <Projects />
-                <Contact LinkedIn={LinkedIn} />
-              </>
+              <Home
+                name={name}
+                profession={profession}
+                image={image}
+                discription={discription}
+                gitHub={gitHub}
+                LinkedIn={LinkedIn}
+              />
             }
           />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact LinkedIn={LinkedIn} />} />
         </Routes>
       </div>
     </Router>
