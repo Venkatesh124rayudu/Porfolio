@@ -8,6 +8,13 @@
     position: relative;
     color: aliceblue;
 }
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #686D76;
+    border-radius: 5px;
+}
 
 .container {
     display: flex;
@@ -34,7 +41,6 @@
   height: 80vh; /* You can adjust the height based on your needs */
   overflow-y: auto; /* Enables scrolling when content exceeds the height */
   box-sizing: border-box;
-  border-radius: 10px;
     
 }
   /* Keep the hover effects as they are */

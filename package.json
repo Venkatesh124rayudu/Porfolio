@@ -1,16 +1,19 @@
 {
-  "homepage": "https://Venkatesh124rayudu.github.io/Demo_portfolio",
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://portfolio.onrender.com",
   "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
